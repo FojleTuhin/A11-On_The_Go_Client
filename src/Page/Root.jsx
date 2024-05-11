@@ -1,9 +1,12 @@
-import Home from "./Home";
+import { Outlet } from "react-router-dom";
+import Footer from "../Component/Footer";
 
 const Root = () => {
     return (
         <div>
-            <Home></Home>
+           <Outlet></Outlet>
+           <Footer></Footer>
+
         </div>
     );
 };
