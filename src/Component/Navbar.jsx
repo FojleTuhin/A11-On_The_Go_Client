@@ -61,7 +61,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex items-center">
-                        <img src="https://i.ibb.co/BcqyDDJ/on-the-go-logo.png" alt="" />
+                        <img className='h-[50px] w-[50px]' src="https://i.ibb.co/BcqyDDJ/on-the-go-logo.png" alt="" />
                         <Link to='/'><a className="btn btn-ghost text-xl font-bold">On The Go</a></Link>
                     </div>
                 </div>
@@ -81,12 +81,10 @@ const Navbar = () => {
                     {
                         user ?
 
-                            <div className='z-40'>
+                            <div className='flex gap-4'>
                                 <a id="clickable"><img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} /></a>
-                                <Tooltip anchorSelect="#clickable" clickable>
-                                    <button className='font-bold mb-4'>{user.displayName}</button>
-                                    <Link> <a onClick={handleSignOut} className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Sign out</a></Link>
-                                </Tooltip>
+                                
+                                <Link> <a onClick={handleSignOut} className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Sign out</a></Link>
                             </div>
                             :
                             <div className='flex gap-2'>
