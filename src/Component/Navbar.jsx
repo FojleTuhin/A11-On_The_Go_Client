@@ -101,7 +101,7 @@ const Navbar = () => {
 
             </div>
 
-            <hr className=" border-black" />
+            {/* <hr className=" border-black" /> */}
         </div>
     );
 };
