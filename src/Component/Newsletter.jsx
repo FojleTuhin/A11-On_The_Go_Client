@@ -17,7 +17,7 @@ const Newsletter = () => {
             <p className="text-center mt-6 text-xl text-gray-500 ">Subscribe to our newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p>
             <div className="mt-10 mb-10 w-[50%] m-auto">
                 <form onSubmit={handleNewsLetter}>
-                    <input type="text" placeholder="Email..." className="w-[70%] border-2 border-black h-[48px] px-6"/>
+                    <input type="text" placeholder="Email..." required className="w-[70%] border-2 border-black h-[48px] px-6"/>
                     <button type="submit" className="bg-black text-white py-3 px-6 ml-5 font-bold">Subscribe</button>
                 </form>
             </div>
