@@ -15,6 +15,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ViewDetails from './Page/ViewDetails.jsx';
 import AddBlog from './Page/AddBlog.jsx';
 import AllBlogs from './Page/AllBlogs.jsx';
+import Wishlist from './Page/Wishlist.jsx';
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:'/allBlogs',
         element:<AllBlogs></AllBlogs>
+      },
+      {
+        path:'/wishlist',
+        element:<Wishlist></Wishlist>
       }
     ]
   }
