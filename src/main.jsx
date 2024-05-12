@@ -12,6 +12,7 @@ import FirebaseProvider from './Firebase/FirebaseProvider.jsx';
 import Login from './Page/Login.jsx';
 import Register from './Page/Register.jsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import ViewDetails from './Page/ViewDetails.jsx';
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path:'/viewDetails',
+        element:<ViewDetails></ViewDetails>
       }
     ]
   }
