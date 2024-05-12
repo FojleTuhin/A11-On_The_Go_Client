@@ -14,15 +14,21 @@ const ViewDetails = () => {
     const { _id } = blog;
 
     const handleComment = (e) => {
+
+        if(user.email=== blog.ownerEmail){
+            return Swal.fire("Sorry!");
+        }
         e.preventDefault();
         const comment = e.target.comment.value;
-        const commented = user.displayName;
+        const commentedName = user.displayName;
+        const commentedEmail = user.email;
         const userImage = user.photoURL;
 
 
         const newComment = {
             comment,
-            commented,
+            commentedName,
+            commentedEmail,
             userImage,
             _id
         }
@@ -69,6 +75,8 @@ const ViewDetails = () => {
         return data
     }
 
+    console.log(blog);
+
 
     return (
         <div className="bg-[#F8F6F1] px-4 md:px-8 lg:px-[70px]">
@@ -82,14 +90,14 @@ const ViewDetails = () => {
 
                     <div className="flex gap-6 items-center text-gray mb-10 text-xs">
                         <p>By</p>
-                        <img className="h-[40px] w-[40px] rounded-full" src={blog.owner_image} alt="" />
-                        <p>{blog.owner_name} </p>
+                        <img className="h-[40px] w-[40px] rounded-full" src={blog.ownerImage} alt="" />
+                        <p>{blog.ownerName} </p>
                     </div>
                     <hr className="mb-10" />
                     <div className="space-y-10">
-                        <p>{blog.short_description}</p>
+                        <p>{blog.shortDescription}</p>
 
-                        <p>{blog.long_description}</p>
+                        <p>{blog.longDescription}</p>
                     </div>
 
                     <div className="mt-10">
@@ -101,7 +109,7 @@ const ViewDetails = () => {
                                     <div className="flex gap-6 mt-8">
                                         <img className="h-[40px] w-[40px] rounded-full" src={blog.userImage} alt="" />
                                         <div>
-                                            <p className="font-semibold">{blog.commented}</p>
+                                            <p className="font-semibold">{blog.commentedName}</p>
                                             <p>{blog.comment}</p>
                                         </div>
                                     </div>
@@ -113,6 +121,7 @@ const ViewDetails = () => {
 
                     <div className="mt-10 ">
                         <form onSubmit={handleComment} className="flex flex-col space-y-5">
+                           
                             <textarea name="comment" id="" className="border-black textarea textarea-bordered" required placeholder="Add a comment"></textarea>
                             <button className="btn">Comment</button>
                         </form>

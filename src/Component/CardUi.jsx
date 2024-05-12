@@ -1,6 +1,46 @@
-import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button, useConst } from '@chakra-ui/react'
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Firebase/FirebaseProvider';
+import Swal from 'sweetalert2';
+
+
 const CardUi = ({ item }) => {
+
+    const {user}= useContext(AuthContext)
+
+    const addToWishList = (item) => {
+
+
+
+        const {_id, category,title, image, longDescription, shortDescription}=item;
+         const newWish ={
+            _id,
+            category,
+            title,
+            image,
+            longDescription,
+            shortDescription,
+            wishedEmail: user.email,
+         }
+
+
+        fetch('http://localhost:5000/wishlist', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newWish)
+        })
+
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                Swal.fire("Saved in wishlist!");
+            })
+    }
+
+
     return (
         <div>
             <Card width='300px' backgroundColor='white' borderRadius='10px' padding='15px'>
@@ -25,11 +65,11 @@ const CardUi = ({ item }) => {
                 <CardFooter padding='5px'>
                     <ButtonGroup justifyContent='space-between'>
 
-                        <Link>
-                            <Button variant='ghost' color='#3EA570' fontWeight='500'>
-                                Wishlist
-                            </Button>
-                        </Link>
+
+                        <Button onClick={() => addToWishList(item)} variant='ghost' color='#3EA570' fontWeight='500'>
+                            Wishlist
+                        </Button>
+
                         <Link to={`/viewDetails/${item._id}`}>
                             <Button variant='ghost' color='#3EA570' fontWeight='500'>
                                 Read more..
