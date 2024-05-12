@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link to='/wishlist'><li><a className="font-medium text-white lg:text-black">Wishlist</a></li></Link>
     </>
     return (
-        <div className="px-4 md:px-8 lg:px-[100px] bg-[#FFF] text-black">
+        <div className="px-4 md:px-8 lg:px-[70px] bg-[#FFF] text-black">
             <div className="navbar pt-6">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -61,7 +61,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex items-center">
-                        <img className='h-[50px] w-[50px]' src="https://i.ibb.co/BcqyDDJ/on-the-go-logo.png" alt="" />
+                        <img className='h-[50px] w-[50px] hidden md:block' src="https://i.ibb.co/BcqyDDJ/on-the-go-logo.png" alt="" />
                         <Link to='/'><a className="btn btn-ghost text-xl font-bold">On The Go</a></Link>
                     </div>
                 </div>
