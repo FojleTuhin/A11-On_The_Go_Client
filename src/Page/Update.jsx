@@ -46,7 +46,6 @@ const Update = () => {
                 
                 if (data.modifiedCount > 0) {
                     Swal.fire("Updated Successfully!"); 
-
                 }
                 console.log(data)
             })
