@@ -58,8 +58,9 @@ const router = createBrowserRouter([
         element:<Wishlist></Wishlist>
       },
       {
-        path:'/update',
-        element:<Update></Update>
+        path:'/update/:id',
+        element:<Update></Update>,
+        loader:({params})=>fetch(`http://localhost:5000/blogs/${params.id}`)
       },
       {
         path:'/featuredBlogs',

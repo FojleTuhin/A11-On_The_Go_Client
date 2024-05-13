@@ -97,7 +97,7 @@ const ViewDetails = () => {
                         </div>
                         <div className={`${user?.email !== blog.ownerEmail && 'hidden'}`}>
                            
-                            <Link to='/update'>
+                            <Link to={`/update/${blog._id}`}>
                                 <button className="btn font-bold"><GrUpdate /></button>
                             </Link>
                         </div>
