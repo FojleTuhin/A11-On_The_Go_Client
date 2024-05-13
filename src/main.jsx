@@ -17,6 +17,7 @@ import AddBlog from './Page/AddBlog.jsx';
 import AllBlogs from './Page/AllBlogs.jsx';
 import Wishlist from './Page/Wishlist.jsx';
 import Update from './Page/Update.jsx';
+import Featured from './Page/Featured.jsx';
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path:'/update',
         element:<Update></Update>
+      },
+      {
+        path:'/featuredBlogs',
+        element:<Featured></Featured>
       }
     ]
   }

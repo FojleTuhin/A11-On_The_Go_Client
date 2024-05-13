@@ -1,6 +1,44 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const WishCard = ({item}) => {
+
+    const handleDelete = (_id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`http://localhost:5000/wishlists/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                       
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+
+                            
+                        }
+
+
+                        console.log(data);
+                    })
+            }
+        });
+    }
+
     return (
         <div>
             <div className="card w-[300px]  shadow-xl ">
@@ -19,7 +57,7 @@ const WishCard = ({item}) => {
                         <div className="card-actions flex justify-between">
                             <Link to={`/viewDetails/${item._id}`}><button className="btn bg-[#3EA570] border-none text-white">Read more</button></Link>
 
-                            <button className="btn  bg-[#3EA570] border-none text-white">Remove</button>
+                            <button onClick={()=>handleDelete(item._id)} className="btn  bg-[#3EA570] border-none text-white">Remove</button>
                         </div>
                     </div>
                 </div>
