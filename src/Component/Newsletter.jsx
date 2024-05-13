@@ -11,7 +11,7 @@ const Newsletter = () => {
 
     }
     return (
-        <div>
+        <div className='px-4 md:px-8 lg:px-[70px]'>
             <ToastContainer></ToastContainer>
             <p className="text-center pt-20 text-3xl font-bold">Newsletter</p>
             <p className="text-center mt-6 text-xl text-gray-500 ">Subscribe to our newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p>

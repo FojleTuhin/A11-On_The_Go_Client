@@ -22,11 +22,11 @@ const Navbar = () => {
 
 
     const links = <>
-        <Link to='/'><li><a className="font-medium text-white lg:text-black">Home</a></li></Link>
-        <Link to='/addBlog'><li><a className="font-medium text-white lg:text-black">Add blog</a></li></Link>
-        <Link to='/allBlogs'><li><a className="font-medium text-white lg:text-black">All blogs</a></li></Link>
-        <Link to='/featuredBlogs'><li><a className="font-medium text-white lg:text-black">Featured blogs</a></li></Link>
-        <Link to='/wishlist'><li><a className="font-medium text-white lg:text-black">Wishlist</a></li></Link>
+        <Link to='/'><li><a className="font-medium text-black">Home</a></li></Link>
+        <Link to='/addBlog'><li><a className="font-medium text-black">Add blog</a></li></Link>
+        <Link to='/allBlogs'><li><a className="font-medium text-black">All blogs</a></li></Link>
+        <Link to='/featuredBlogs'><li><a className="font-medium text-black">Featured blogs</a></li></Link>
+        <Link to='/wishlist'><li><a className="font-medium text-black">Wishlist</a></li></Link>
     </>
     return (
         <div className="px-4 md:px-8 lg:px-[70px] bg-[#FFF] text-black">
@@ -52,8 +52,8 @@ const Navbar = () => {
                                     </div>
                                     :
                                     <div className='md:flex gap-2 mt-4'>
-                                        <Link to='/login'> <a className=" border border-white md:border-black text-white md:text-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Login</a></Link>
-                                        <Link to='/register' className=" border mt-3 border-white md:border-black text-white md:text-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser />Sign up</Link>
+                                        <Link to='/login'> <a className=" border border-white md:border-black  text-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Login</a></Link>
+                                        <Link to='/register' className=" border mt-3 border-white md:border-black  text-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser />Sign up</Link>
                                     </div>
                             }
 
