@@ -86,7 +86,7 @@ const Login = () => {
 
     return (
         <div style={logInStyle}>
-            <div className='flex justify-evenly'>
+            <div className='md:flex justify-evenly'>
                 <div>
                     <Lottie animationData={login} className="h-[400px] mt-10"/>
                 </div>

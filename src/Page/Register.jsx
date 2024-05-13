@@ -97,7 +97,7 @@ const Register = () => {
     return (
         <div style={RegisterStyle}>
             <div><Toaster /></div>
-            <div className='flex justify-evenly'>
+            <div className='md:flex justify-evenly'>
                 <div>
                 <Lottie animationData={register} className="h-[400px] mt-10"/>
                 </div>

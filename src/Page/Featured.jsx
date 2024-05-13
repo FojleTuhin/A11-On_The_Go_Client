@@ -79,7 +79,7 @@ const Featured = () => {
     return (
 
 
-        <div className='px-[70px] mt-10'>
+        <div className='px-4 md:px-8 lg:px-[70px] mt-10'>
             <div>
                 <MUIDataTable
                     title={"Featured list"}

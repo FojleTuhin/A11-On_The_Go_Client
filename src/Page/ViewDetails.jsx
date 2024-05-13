@@ -83,9 +83,9 @@ const ViewDetails = () => {
         <div className="bg-[#F8F6F1] px-4 md:px-8 lg:px-[70px]">
             <div>
                 <img className="h-[550px] w-full pt-10 pb-10 " src={blog.image} alt="" />
-                <div className="w-[70%] m-auto p-12 bg-white relative bottom-32">
+                <div className="w-[90%] p-6 md:w-[70%] m-auto md:p-12 bg-white relative bottom-32">
                     <p className="text-gray">{blog.category}</p>
-                    <p className="text-5xl">{blog.title}</p>
+                    <p className="text-3xl md:text-5xl">{blog.title}</p>
 
                     <hr className="w-[20%] border-2 mt-10 mb-10 border-black" />
 
