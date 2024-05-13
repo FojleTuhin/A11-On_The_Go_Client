@@ -16,6 +16,7 @@ import ViewDetails from './Page/ViewDetails.jsx';
 import AddBlog from './Page/AddBlog.jsx';
 import AllBlogs from './Page/AllBlogs.jsx';
 import Wishlist from './Page/Wishlist.jsx';
+import Update from './Page/Update.jsx';
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path:'/wishlist',
         element:<Wishlist></Wishlist>
+      },
+      {
+        path:'/update',
+        element:<Update></Update>
       }
     ]
   }

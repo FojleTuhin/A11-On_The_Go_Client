@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../Firebase/FirebaseProvider";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { GrUpdate } from "react-icons/gr";
 
 const ViewDetails = () => {
 
@@ -15,8 +16,8 @@ const ViewDetails = () => {
 
     const handleComment = (e) => {
 
-        if(user.email=== blog.ownerEmail){
-            return Swal.fire("Sorry!");
+        if (user.email === blog.ownerEmail) {
+            return Swal.fire("Can not comment on own blog!");
         }
         e.preventDefault();
         const comment = e.target.comment.value;
@@ -88,10 +89,19 @@ const ViewDetails = () => {
 
                     <hr className="w-[20%] border-2 mt-10 mb-10 border-black" />
 
-                    <div className="flex gap-6 items-center text-gray mb-10 text-xs">
-                        <p>By</p>
-                        <img className="h-[40px] w-[40px] rounded-full" src={blog.ownerImage} alt="" />
-                        <p>{blog.ownerName} </p>
+                    <div className="flex justify-between">
+                        <div className="flex gap-6 items-center text-gray mb-10 text-xs">
+                            <p>By</p>
+                            <img className="h-[40px] w-[40px] rounded-full" src={blog.ownerImage} alt="" />
+                            <p>{blog.ownerName} </p>
+                        </div>
+                        <div className={`${user?.email !== blog.ownerEmail && 'hidden'}`}>
+                           
+                            <Link to='/update'>
+                                <button className="btn font-bold"><GrUpdate /></button>
+                            </Link>
+                        </div>
+
                     </div>
                     <hr className="mb-10" />
                     <div className="space-y-10">
@@ -102,7 +112,7 @@ const ViewDetails = () => {
 
                     <div className="mt-10">
                         <p className="underline font-medium ">View comments</p>
-                        
+
                         {
                             data.filter(item => item._id === blog._id).map(blog =>
                                 <div key={blog._id}>
@@ -121,7 +131,7 @@ const ViewDetails = () => {
 
                     <div className="mt-10 ">
                         <form onSubmit={handleComment} className="flex flex-col space-y-5">
-                           
+
                             <textarea name="comment" id="" className="border-black textarea textarea-bordered" required placeholder="Add a comment"></textarea>
                             <button className="btn">Comment</button>
                         </form>

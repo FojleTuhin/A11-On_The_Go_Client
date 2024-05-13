@@ -7,14 +7,18 @@ import Swal from 'sweetalert2';
 
 const CardUi = ({ item }) => {
 
-    const {user}= useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
     const addToWishList = (item) => {
 
+        if(!user){
+            Swal.fire("Please login first!");
+        }
 
 
-        const {_id, category,title, image, longDescription, shortDescription}=item;
-         const newWish ={
+
+        const { _id, category, title, image, longDescription, shortDescription } = item;
+        const newWish = {
             _id,
             category,
             title,
@@ -22,7 +26,7 @@ const CardUi = ({ item }) => {
             longDescription,
             shortDescription,
             wishedEmail: user.email,
-         }
+        }
 
 
         fetch('http://localhost:5000/wishlist', {
