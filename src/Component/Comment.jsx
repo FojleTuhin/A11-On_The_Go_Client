@@ -10,10 +10,16 @@ const Comment = () => {
 
     const handleComment = (e) => {
         e.preventDefault();
+
+        if(!user){
+            Swal.fire("Please login first!");
+            return
+        }
+        
         const comment = e.target.comment.value;
-        const commentedName = user.displayName;
-        const commentedEmail = user.email;
-        const userImage = user.photoURL;
+        const commentedName = user?.displayName;
+        const commentedEmail = user?.email;
+        const userImage = user?.photoURL;
 
 
         const newComment = {
@@ -53,12 +59,10 @@ const Comment = () => {
 
     })
     const getData = async () => {
-        const { data } = await axios(`https://on-the-go-server.vercel.app
-/homePageComment`)
+        const { data } = await axios(`https://on-the-go-server.vercel.app/homePageComment`)
         return data
     }
 
-    console.log(data);
 
 
     return (

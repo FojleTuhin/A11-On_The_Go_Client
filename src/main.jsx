@@ -44,12 +44,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/viewDetails/:id',
-        element:<ViewDetails></ViewDetails>,
+        element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader:({params})=>fetch(`https://on-the-go-server.vercel.app/blogs/${params.id}`)
       },
       {
         path:'/addBlog',
-        element:<AddBlog></AddBlog>
+        element:<PrivateRoute><AddBlog></AddBlog></PrivateRoute>
       },
       {
         path:'/allBlogs',
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/wishlist',
-        element:<Wishlist></Wishlist>
+        element:<PrivateRoute><Wishlist></Wishlist></PrivateRoute>
       },
       {
         path:'/update/:id',
