@@ -19,6 +19,7 @@ import Wishlist from './Page/Wishlist.jsx';
 import Update from './Page/Update.jsx';
 import Featured from './Page/Featured.jsx';
 import PrivateRoute from './Page/PrivateRoute.jsx';
+import ScroolMotion from './Component/ScroolMotion.jsx';
 
 const queryClient = new QueryClient();
 
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path:'/featuredBlogs',
         element:<Featured></Featured>
+      },
+      {
+        path:'/motion',
+        element:<ScroolMotion></ScroolMotion>
       }
     ]
   }
