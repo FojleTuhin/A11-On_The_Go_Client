@@ -1,3 +1,4 @@
+import Advanture from "../Component/Advanture";
 import Banner from "../Component/Banner";
 import Comment from "../Component/Comment";
 import Newsletter from "../Component/Newsletter";
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <RecentBlog></RecentBlog>
+            <Advanture></Advanture>
             <Newsletter></Newsletter>
             <Comment></Comment>
         </div>
