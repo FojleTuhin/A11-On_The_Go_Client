@@ -60,9 +60,9 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <div className="flex items-center">
+                    <div className="md:flex items-center">
                         <img className='h-[50px] w-[50px] hidden md:block' src="https://i.ibb.co/BcqyDDJ/on-the-go-logo.png" alt="" />
-                        <Link to='/'><a className="btn btn-ghost text-xl font-bold">On The Go</a></Link>
+                        <Link to='/'><a className="btn btn-ghost md:text-xl font-bold">On The Go</a></Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
