@@ -69,10 +69,10 @@ const Comment = () => {
 
             <div className='mb-20 flex flex-wrap gap-6 justify-center'>
                 {
-                    data.map(comment =>
+                    data.map((comment, index) =>
 
 
-                        <div key={comment}>
+                        <div key={index}>
                             <div className=' w-[250px] h-[300px] mt-14'>
                                 <div className='w-[100px] h-[100px] m-auto relative top-12'>
                                     <img className='w-[100px] h-[100px] rounded-full' src={comment.userImage} alt="" />

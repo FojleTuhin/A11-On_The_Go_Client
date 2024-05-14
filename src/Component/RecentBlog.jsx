@@ -11,7 +11,7 @@ const RecentBlog = () => {
 
     })
     const getData = async () => {
-        const { data } = await axios(`https://https://on-the-go-server.vercel.app/blogs`)
+        const { data } = await axios(`https://on-the-go-server.vercel.app/blogs`)
         return data
     }
 
