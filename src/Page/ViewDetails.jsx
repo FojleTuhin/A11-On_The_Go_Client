@@ -36,7 +36,7 @@ const ViewDetails = () => {
 
         // add comment
 
-        fetch('http://localhost:5000/comment', {
+        fetch('https://on-the-go-server.vercel.app/comment', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -72,7 +72,7 @@ const ViewDetails = () => {
 
     })
     const getData = async () => {
-        const { data } = await axios(`http://localhost:5000/comments`)
+        const { data } = await axios(`https://on-the-go-server.vercel.app/comments`)
         return data
     }
 

@@ -24,7 +24,7 @@ const Comment = () => {
         }
 
 
-        fetch('http://localhost:5000/homePageComment', {
+        fetch('https://on-the-go-server.vercel.app/homePageComment', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -53,7 +53,8 @@ const Comment = () => {
 
     })
     const getData = async () => {
-        const { data } = await axios(`http://localhost:5000/homePageComment`)
+        const { data } = await axios(`https://on-the-go-server.vercel.app
+/homePageComment`)
         return data
     }
 

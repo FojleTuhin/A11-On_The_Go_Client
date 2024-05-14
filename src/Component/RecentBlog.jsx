@@ -11,10 +11,11 @@ const RecentBlog = () => {
 
     })
     const getData = async () => {
-        const { data } = await axios(`http://localhost:5000/blogs`)
+        const { data } = await axios(`https://https://on-the-go-server.vercel.app/blogs`)
         return data
     }
 
+    
 
 
     return (

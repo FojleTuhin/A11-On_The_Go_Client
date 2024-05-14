@@ -16,7 +16,7 @@ const WishCard = ({item}) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/wishlists/${_id}`, {
+                fetch(`https://on-the-go-server.vercel.app/wishlists/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -24,8 +24,8 @@ const WishCard = ({item}) => {
                        
                         if (data.deletedCount > 0) {
                             Swal.fire({
-                                title: "Deleted!",
-                                text: "Your file has been deleted.",
+                                title: "Removed!",
+                                text: "Your file has been removed.",
                                 icon: "success"
                             });
 

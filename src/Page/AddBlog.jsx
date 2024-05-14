@@ -34,7 +34,7 @@ const AddBlog = () => {
 
 
         //add blog in database
-        fetch('http://localhost:5000/blog', {
+        fetch('https://on-the-go-server.vercel.app/blog', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

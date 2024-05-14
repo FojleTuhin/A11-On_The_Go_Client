@@ -33,7 +33,7 @@ const Update = () => {
 
 
         //Update blog in database
-        fetch(`http://localhost:5000/updateBlog/${_id}`, {
+        fetch(`https://on-the-go-server.vercel.app/updateBlog/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

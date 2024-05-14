@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path:'/viewDetails/:id',
         element:<ViewDetails></ViewDetails>,
-        loader:({params})=>fetch(`http://localhost:5000/blogs/${params.id}`)
+        loader:({params})=>fetch(`https://on-the-go-server.vercel.app/blogs/${params.id}`)
       },
       {
         path:'/addBlog',
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
       {
         path:'/update/:id',
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/blogs/${params.id}`)
+        loader:({params})=>fetch(`https://on-the-go-server.vercel.app/blogs/${params.id}`)
       },
       {
         path:'/featuredBlogs',

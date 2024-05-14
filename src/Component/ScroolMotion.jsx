@@ -39,7 +39,7 @@ const ScroolMotion = () => {
 
             className="relative grid h-[500px] md:min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200">
 
-            <h1 className="max-w-3xl bg-gradient-to-br from white to bg-gray-400 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+            <h1 className="max-w-3xl bg-gradient-to-br from white to bg-gray-400 bg-clip-text text-center text-6xl font-medium leading-tight text-transparent  sm:leading-tight md:text-7xl md:leading-tight">
                 Where will you go next?
             </h1>
 

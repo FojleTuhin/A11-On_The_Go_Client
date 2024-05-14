@@ -14,7 +14,7 @@ const Featured = () => {
 
     
     const getData = async () => {
-        const { data } = await axios(`http://localhost:5000/feature?`)
+        const { data } = await axios(`https://on-the-go-server.vercel.app/feature`)
         return data
     }
 
