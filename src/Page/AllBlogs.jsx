@@ -9,17 +9,17 @@ const AllBlogs = () => {
 
     const [filter, setFilter] = useState('');
 
-    const { data = [] } = useQuery({
+    const { data } = useQuery({
         queryFn: () => getData(),
-        queryKey: [filter, search]
+        queryKey: ["blogs",filter, search],
+        initialData:[]
 
     })
     const getData = async () => {
-        const { data } = await axios(`https://on-the-go-server.vercel.app/blogs?filter=${filter}& search=${search}`)
+        const { data } = await axios(`https://on-the-go-server.vercel.app/blogs?filter=${filter}&search=${search}`)
         return data
     }
 
-   
 
     const handleSearch=(e)=>{
         e.preventDefault()
