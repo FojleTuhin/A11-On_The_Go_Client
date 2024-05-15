@@ -26,7 +26,6 @@ const AllBlogs = () => {
         const searchText = e.target.title.value;
         setSearch(searchText)
         e.target.reset()
-
     }
 
 

@@ -16,6 +16,7 @@ const Wishlist = () => {
     })
     const getData = async () => {
         const { data } = await axios(`https://on-the-go-server.vercel.app/wishlist/${user?.email}`)
+        
         return data
     }
 

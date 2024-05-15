@@ -5,15 +5,21 @@ import axios from "axios";
 
 const RecentBlog = () => {
 
+    
+
+
     const { data = [] } = useQuery({
         queryFn: () => getData(),
-        queryKey: ['blogs']
+        queryKey: ['feature']
 
     })
+
+    
     const getData = async () => {
-        const { data } = await axios(`https://on-the-go-server.vercel.app/blogs`)
+        const { data } = await axios(`https://on-the-go-server.vercel.app/feature`)
         return data
     }
+
 
     
 

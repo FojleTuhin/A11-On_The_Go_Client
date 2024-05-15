@@ -11,7 +11,7 @@ const WishCard = ({item}) => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes, remove it!"
         }).then((result) => {
             if (result.isConfirmed) {
 
@@ -23,6 +23,7 @@ const WishCard = ({item}) => {
                     .then(data => {
                        
                         if (data.deletedCount > 0) {
+                            
                             Swal.fire({
                                 title: "Removed!",
                                 text: "Your file has been removed.",

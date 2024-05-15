@@ -51,21 +51,13 @@ const FirebaseProvider = ({children}) => {
     useEffect( ()=>{
       const unSubscribe=  onAuthStateChanged(auth, currentUser=>{
 
-        const userEmail= currentUser?.email || user?.email;
+        // const userEmail= currentUser?.email || user?.email;
 
             console.log('user in the auth state change', currentUser);
             setUser(currentUser);
             setLoading(false);
 
-            if(currentUser){
-                const loggedUser={
-                    email:userEmail
-                }
-                axios.post('http://localhost:5000/jwt',loggedUser, {WithCredentials:true})
-                .then(res=>{
-                    console.log('token response',res.data);
-                })
-            }
+            
         })
 
         return ()=>{
