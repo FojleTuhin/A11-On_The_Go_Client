@@ -12,6 +12,9 @@ const AddBlog = () => {
         const category = form.category_name.value;
         const title = form.title.value;
         const image = form.image.value;
+        const place = form.Place.value;
+        const Latitude = form.Place_Latitude.value;
+        const Longitude = form.Place_Longitude.value;
         const shortDescription = form.shortDescription.value;
         const longDescription = form.longDescription.value;
         const ownerEmail = user.email;
@@ -28,7 +31,12 @@ const AddBlog = () => {
             longDescription,
             ownerEmail,
             ownerImage,
-            ownerName
+            ownerName,
+            BlogPlace:{
+                place,
+                Latitude,
+                Longitude
+            }
             
         }
 
@@ -119,7 +127,7 @@ const AddBlog = () => {
                             <span className="label-text text-black font-bold">Latitude</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="Place-Latitude" required placeholder="Find Latitude from google map" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="text" name="Place_Latitude" required placeholder="Find Latitude from google map" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                     <div className="form-control w-full">
@@ -127,7 +135,7 @@ const AddBlog = () => {
                             <span className="label-text text-black font-bold">Longitude</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="Place-Longitude" required placeholder="Find Longitude from google map" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="text" name="Place_Longitude" required placeholder="Find Longitude from google map" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                     
