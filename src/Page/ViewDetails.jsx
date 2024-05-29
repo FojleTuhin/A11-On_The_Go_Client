@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { GrUpdate } from "react-icons/gr";
+import Mapping from "../Component/Mapping";
 
 const ViewDetails = () => {
 
@@ -96,7 +97,7 @@ const ViewDetails = () => {
                             <p>{blog.ownerName} </p>
                         </div>
                         <div className={`${user?.email !== blog.ownerEmail && 'hidden'}`}>
-                           
+
                             <Link to={`/update/${blog._id}`}>
                                 <button className="btn font-bold"><GrUpdate /></button>
                             </Link>
@@ -108,6 +109,15 @@ const ViewDetails = () => {
                         <p>{blog.shortDescription}</p>
 
                         <p>{blog.longDescription}</p>
+                    </div>
+
+                    <div className="mt-10">
+                        {
+                            blog?.BlogPlace &&
+                            <Mapping Latitude={blog.BlogPlace.Latitude} Longitude={blog.BlogPlace.Longitude}></Mapping>
+
+
+                        }
                     </div>
 
                     <div className="mt-10">
@@ -129,6 +139,8 @@ const ViewDetails = () => {
 
                     </div>
 
+
+
                     <div className="mt-10 ">
                         <form onSubmit={handleComment} className="flex flex-col space-y-5">
 
@@ -140,7 +152,7 @@ const ViewDetails = () => {
 
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
