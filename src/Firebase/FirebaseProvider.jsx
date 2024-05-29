@@ -3,67 +3,65 @@ import { createContext, useEffect, useState } from "react";
 import auth from "./FirebaseConfig";
 import { GoogleAuthProvider } from "firebase/auth";
 import { FacebookAuthProvider } from "firebase/auth";
-import axios from "axios";
 
 
 export const AuthContext = createContext(null)
-const FirebaseProvider = ({children}) => {
+const FirebaseProvider = ({ children }) => {
 
-    const[user, setUser] =useState(null);
-    const[loading, setLoading]=useState(true);
-    const googleProvider= new GoogleAuthProvider()
-    const facebookProvider= new FacebookAuthProvider()
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const googleProvider = new GoogleAuthProvider()
+    const facebookProvider = new FacebookAuthProvider()
 
-    const createUser=(email, password)=>{
+    const createUser = (email, password) => {
         setLoading(true)
-      return createUserWithEmailAndPassword(auth, email, password)
+        return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    const updateUser=(name, photo)=>{
-       return updateProfile(auth.currentUser, {
+    const updateUser = (name, photo) => {
+        return updateProfile(auth.currentUser, {
             displayName: name,
-             photoURL: photo
-          }
+            photoURL: photo
+        }
         )
     }
 
-    const signIn=(email, password)=>{
+    const signIn = (email, password) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
 
     }
 
-    const logOut =()=>{
+    const logOut = () => {
         setLoading(true)
         return signOut(auth)
     }
 
-    const googleLogin=()=>{
+    const googleLogin = () => {
         return signInWithPopup(auth, googleProvider)
     }
 
 
-    const facebookLogin=()=>{
+    const facebookLogin = () => {
         return signInWithPopup(auth, facebookProvider)
 
     }
 
-    useEffect( ()=>{
-      const unSubscribe=  onAuthStateChanged(auth, currentUser=>{
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
 
-        // const userEmail= currentUser?.email || user?.email;
 
             console.log('user in the auth state change', currentUser);
             setUser(currentUser);
             setLoading(false);
 
-            
+
         })
 
-        return ()=>{
+        return () => {
             unSubscribe();
         }
-    },[])
+    }, [])
 
 
 
@@ -73,7 +71,7 @@ const FirebaseProvider = ({children}) => {
 
 
 
-    const allValues={
+    const allValues = {
         user,
         createUser,
         logOut,

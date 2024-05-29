@@ -104,6 +104,34 @@ const AddBlog = () => {
                     </div>
                     
                 </div>
+                <div className="md:flex mb-8 gap-4 ">
+
+                    <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text text-black font-bold">Place</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name="Place" required placeholder="Place" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                        </label>
+                    </div>
+                    <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text text-black font-bold">Latitude</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name="Place-Latitude" required placeholder="Find Latitude from google map" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                        </label>
+                    </div>
+                    <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text text-black font-bold">Longitude</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name="Place-Longitude" required placeholder="Find Longitude from google map" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                        </label>
+                    </div>
+                    
+                </div>
                 
                 <div className="md:flex mb-8 gap-4 ">
                     <div className="form-control w-full">
