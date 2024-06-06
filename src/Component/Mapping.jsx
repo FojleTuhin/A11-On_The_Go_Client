@@ -5,8 +5,7 @@ const Mapping = ({ Latitude, Longitude }) => {
     const [center, setCenter] = useState([])
     const [zoom, setZoom] = useState(15)
 
-    console.log(Latitude, Longitude);
-    console.log(center);
+ 
     return (
         <div>
             <Map
