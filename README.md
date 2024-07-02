@@ -39,7 +39,7 @@
 
 ## Use Locally
 1. Clone the Project
-  https://github.com/FojleTuhin/A12-ParcelPioneer_Client.git
+  https://github.com/FojleTuhin/A11-On_The_Go_Client.git
 2. Install Necessary Dependencies
   npm i
 3. Set Up Configuration and Environment File
