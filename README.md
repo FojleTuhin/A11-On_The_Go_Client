@@ -38,11 +38,11 @@
 - Express js
 
 ## Use Locally
-1. Clone the Project
+1. Clone the Project <br/>
   https://github.com/FojleTuhin/A11-On_The_Go_Client.git
-2. Install Necessary Dependencies
+2. Install Necessary Dependencies<br/>
   npm i
 3. Set Up Configuration and Environment File
-4. Run the Project
+4. Run the Project<br/>
   npm run dev
 
