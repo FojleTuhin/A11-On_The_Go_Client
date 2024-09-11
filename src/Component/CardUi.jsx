@@ -70,12 +70,12 @@ const CardUi = ({ item }) => {
                     <ButtonGroup justifyContent='space-between'>
 
 
-                        <Button onClick={() => addToWishList(item)} variant='ghost' color='#3EA570' fontWeight='500'>
+                        <Button onClick={() => addToWishList(item)} variant='ghost' color='#3EA570' borderRadius='20px' backgroundColor='pink' padding='4px 8px' fontWeight='500'>
                             Wishlist
                         </Button>
 
                         <Link to={`/viewDetails/${item._id}`}>
-                            <Button variant='ghost' color='#3EA570' fontWeight='500'>
+                            <Button variant='ghost' color='#3EA570' borderRadius='20px' backgroundColor='pink' padding='4px 8px' fontWeight='500'>
                                 Read more..
                             </Button>
                         </Link>
