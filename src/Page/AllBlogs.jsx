@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import CardUi from '../Component/CardUi';
 import { useState } from 'react';
+import img1 from "../../public/pexels-pixabay-65606.jpg"
 
 const AllBlogs = () => {
 
@@ -32,7 +33,8 @@ const AllBlogs = () => {
     return (
 
 
-        <div className='pt-20'>
+        <div className=''>
+            <img src={img1} className='h-[300px] w-full' alt="" />
             <div className="bg-[#EBFBE5]  text-[#3EA570] py-4">
                 <h1 className="font-bold text-xl text-center">All Blog</h1>
             </div>

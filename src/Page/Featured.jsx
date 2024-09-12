@@ -1,6 +1,7 @@
 import MUIDataTable from "mui-datatables";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import img1 from "../../public/pexels-stywo-1054218.jpg"
 
 
 const Featured = () => {
@@ -12,7 +13,7 @@ const Featured = () => {
 
     })
 
-    
+
     const getData = async () => {
         const { data } = await axios(`https://on-the-go-server.vercel.app/feature`)
         return data
@@ -22,9 +23,9 @@ const Featured = () => {
 
 
 
-    
 
-   
+
+
 
     const columns = [
         {
@@ -37,7 +38,7 @@ const Featured = () => {
                     );
                 }
             },
-            flex:1
+            flex: 1
         },
         {
             name: "ownerImage",
@@ -79,9 +80,10 @@ const Featured = () => {
     return (
 
 
-        <div className='px-4 md:px-8 lg:px-[70px]  pt-24
-        '>
-            <div>
+        <div className="relative">
+            <img src={img1} className="h-[300px] w-full" alt="" />
+            <div className='px-4 md:px-8 lg:px-[70px] -mt-32 mb-10 '>
+
                 <MUIDataTable
                     title={"Featured list"}
                     data={data}
@@ -89,8 +91,9 @@ const Featured = () => {
                     options={options}
 
                 />
-            </div>
 
+
+            </div>
         </div>
     );
 };
