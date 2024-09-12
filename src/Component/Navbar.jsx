@@ -50,7 +50,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className={`px-4 md:px-8 lg:px-[70px] text-[#FFF] fixed z-10 w-full transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className={`px-4 md:px-8 lg:px-[70px] text-[#FFF] bg-black bg-opacity-10 fixed z-10 w-full transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="navbar pt-6">
                 <div className="navbar-start">
                     <div className="dropdown">

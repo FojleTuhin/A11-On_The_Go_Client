@@ -32,8 +32,8 @@ const AllBlogs = () => {
     return (
 
 
-        <div>
-            <div className="bg-[#EBFBE5] text-[#3EA570] py-4">
+        <div className='pt-20'>
+            <div className="bg-[#EBFBE5]  text-[#3EA570] py-4">
                 <h1 className="font-bold text-xl text-center">All Blog</h1>
             </div>
 
