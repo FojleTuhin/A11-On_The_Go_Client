@@ -49,7 +49,7 @@ const RecentBlog = () => {
 
 
     return (
-        <div className='bg-[#F8F6F1] px-4 md:px-8 lg:px-[70px] pb-10  pt-48 flex justify-center flex-wrap gap-6'>
+        <div className='bg-[#1F2744] px-4 md:px-8 lg:px-[70px] pb-10  pt-48 flex justify-center flex-wrap gap-6'>
 
             {
                 data.slice(0, 6).map(item => <CardUi key={item._id} item={item}></CardUi>)

@@ -124,8 +124,8 @@ const Login = () => {
                                     <button onClick={handleFacebookLogin} className="btn"><FaFacebook />Facebook</button>
                                 </div>
 
-                                <div className="mb-8 px-6">
-                                    <p>New? <span className="font-bold text-blue-600"><Link to='/register'>Sign up</Link></span></p>
+                                <div className="mb-8 px-6 text-center">
+                                    <p>New? <span className="font-bold  text-blue-600"><Link to='/register'>Sign up</Link></span></p>
                                 </div>
 
 

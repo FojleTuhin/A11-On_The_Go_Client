@@ -7,7 +7,7 @@ import ScroolMotion from "../Component/ScroolMotion";
 
 const Home = () => {
     return (
-        <div>
+        <div className="bg-[#1F2744]">
             <ScroolMotion></ScroolMotion>
             {/* <Banner></Banner> */}
             <RecentBlog></RecentBlog>

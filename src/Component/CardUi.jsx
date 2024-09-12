@@ -11,7 +11,7 @@ const CardUi = ({ item }) => {
 
     const addToWishList = (item) => {
 
-        if(!user){
+        if (!user) {
             Swal.fire("Please login first!");
         }
 
@@ -47,12 +47,14 @@ const CardUi = ({ item }) => {
 
     return (
         <div>
-            <Card width='300px' backgroundColor='white' borderRadius='10px' padding='15px'>
+            <Card width='300px' height='411px' backgroundColor='white' borderRadius='10px' padding='15px'>
                 <CardBody >
                     <Image
                         src={item.image}
 
                         borderRadius='10px'
+                        height='185px'
+
 
                     />
                     <Stack mt='6' spacing='3' padding='5px'
@@ -60,14 +62,15 @@ const CardUi = ({ item }) => {
                         <Heading size='md' fontWeight='bold'>{item.category}</Heading>
                         <Text fontWeight='600' mt='6'>{item.title}</Text>
                         <Text mt='6'>
-                            {item.shortDescription}
+                            {item.shortDescription.slice(0, 65)}
                         </Text>
 
                     </Stack>
                 </CardBody>
                 <Divider />
                 <CardFooter padding='5px'>
-                    <ButtonGroup justifyContent='space-between'>
+                    <ButtonGroup justifyContent='space-between'
+                    >
 
 
                         <Button onClick={() => addToWishList(item)} variant='ghost' color='#3EA570' borderRadius='20px' backgroundColor='pink' padding='4px 8px' fontWeight='500'>
