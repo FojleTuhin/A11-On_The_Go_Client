@@ -42,10 +42,14 @@ const Navbar = () => {
     const links = (
         <>
             <Link to='/'><li><a className="font-medium ">Home</a></li></Link>
-            <Link to='/addBlog'><li><a className="font-medium ">Add blog</a></li></Link>
+            {
+                user && <Link to='/addBlog'><li><a className="font-medium ">Add blog</a></li></Link>
+            }
             <Link to='/allBlogs'><li><a className="font-medium ">All blogs</a></li></Link>
             <Link to='/featuredBlogs'><li><a className="font-medium ">Featured blogs</a></li></Link>
-            <Link to='/wishlist'><li><a className="font-medium ">Wishlist</a></li></Link>
+            {
+                user && <Link to='/wishlist'><li><a className="font-medium ">Wishlist</a></li></Link>
+            }
         </>
     );
 
@@ -100,7 +104,7 @@ const Navbar = () => {
                         (
                             <div className='flex gap-2'>
                                 <Link to='/login'> <a className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Login</a></Link>
-                               
+
 
                             </div>
                         )

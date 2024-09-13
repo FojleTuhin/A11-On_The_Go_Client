@@ -71,7 +71,7 @@ const Register = () => {
             toast.error("Password must be an capital letter, special character and numeric number");
         }
 
-        
+
 
 
         else (
@@ -99,7 +99,9 @@ const Register = () => {
             <div><Toaster /></div>
             <div className='md:flex justify-evenly'>
                 <div>
-                <Lottie animationData={register} className="h-[400px] mt-10"/>
+                    <Link to='/'>
+                        <Lottie animationData={register} className="h-[400px] mt-10" />
+                    </Link>
                 </div>
                 <div>
                     <div className="hero min-h-screen ">
