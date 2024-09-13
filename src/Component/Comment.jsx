@@ -1,9 +1,19 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AuthContext } from '../Firebase/FirebaseProvider';
 import Swal from 'sweetalert2';
-import { data } from 'autoprefixer';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import './styles.css';
+
+// import required modules
+import { Pagination } from 'swiper/modules';
 
 const Comment = () => {
     const { user } = useContext(AuthContext)
@@ -11,11 +21,11 @@ const Comment = () => {
     const handleComment = (e) => {
         e.preventDefault();
 
-        if(!user){
+        if (!user) {
             Swal.fire("Please login first!");
             return
         }
-        
+
         const comment = e.target.comment.value;
         const commentedName = user?.displayName;
         const commentedEmail = user?.email;
@@ -72,7 +82,7 @@ const Comment = () => {
 
 
             <div className='mb-20 flex flex-wrap gap-6 justify-center'>
-                {
+                {/* {
                     data.map((comment, index) =>
 
 
@@ -91,7 +101,42 @@ const Comment = () => {
                                 </div>
                             </div>
                         </div>)
-                }
+                } */}
+
+
+                <Swiper
+                    slidesPerView={3}
+                    spaceBetween={30}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Pagination]}
+                    className="mySwiper"
+                >
+                    {
+                        data.map((comment, index) =>
+
+                            <SwiperSlide key={index}>
+                                <div >
+                                    <div className=' w-[250px]  mt-14'>
+                                        <div className='w-[100px] h-[100px] m-auto relative top-12'>
+                                            <img className='w-[100px] h-[100px] rounded-full' src={comment.userImage} alt="" />
+                                        </div>
+                                        <div className=' bg-[#F8F6F1] pt-[80px] pb-[20px] px-[20px] rounded-3xl h-[256px]'>
+
+                                            <div className=''>
+                                                <h2 className='text-center font-extrabold text-[#3EA570] mb-5 text-2xl'>{comment.commentedName}</h2>
+                                                <p>{comment.comment}</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    }
+
+                </Swiper>
             </div>
             <div className="mt-10 mb-40">
                 <form onSubmit={handleComment} className="flex flex-col space-y-5">
