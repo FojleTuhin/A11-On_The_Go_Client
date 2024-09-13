@@ -76,7 +76,7 @@ const Comment = () => {
 
 
     return (
-        <div className=' px-4 md:px-8 lg:px-[70px] '>
+        <div className=' px-4 md:px-8 lg:px-[70px] pb-10'>
 
 
 
@@ -105,7 +105,7 @@ const Comment = () => {
 
 
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={4}
                     spaceBetween={30}
                     pagination={{
                         clickable: true,
@@ -138,7 +138,7 @@ const Comment = () => {
 
                 </Swiper>
             </div>
-            <div className="mt-10 mb-40">
+            <div className="mt-10 ">
                 <form onSubmit={handleComment} className="flex flex-col space-y-5">
 
                     <textarea name="comment" id="" className="border-black textarea textarea-bordered" required placeholder="Add a comment"></textarea>
