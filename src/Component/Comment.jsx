@@ -138,7 +138,7 @@ const Comment = () => {
 
                 </Swiper>
             </div>
-            <div className="mt-10 ">
+            <div className="mt-10 w-[50%] mx-auto">
                 <form onSubmit={handleComment} className="flex flex-col space-y-5">
 
                     <textarea name="comment" id="" className="border-black textarea textarea-bordered" required placeholder="Add a comment"></textarea>
