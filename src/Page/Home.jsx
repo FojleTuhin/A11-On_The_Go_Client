@@ -4,17 +4,21 @@ import Comment from "../Component/Comment";
 import Newsletter from "../Component/Newsletter";
 import RecentBlog from "../Component/RecentBlog";
 import ScroolMotion from "../Component/ScroolMotion";
+import Statistics from "../Component/Statistics";
 
 const Home = () => {
     return (
-        <div className="bg-[#1F2744]">
-            
+        <div className="">
+
             <ScroolMotion></ScroolMotion>
-            {/* <Banner></Banner> */}
-            <RecentBlog></RecentBlog>
-            <Advanture></Advanture>
-            <Newsletter></Newsletter>
-            <Comment></Comment>
+           
+            <div className="max-w-7xl mx-auto bg-[#DDF3FD] ">
+                <Statistics></Statistics>
+                <RecentBlog></RecentBlog>
+                <Advanture></Advanture>
+                <Newsletter></Newsletter>
+                <Comment></Comment>
+            </div>
         </div>
     );
 };
