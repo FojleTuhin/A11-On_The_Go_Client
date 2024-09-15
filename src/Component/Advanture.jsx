@@ -15,9 +15,9 @@ const Advanture = () => {
 
                 </div>
                 <div className="flex items-center mt-5 md:mt-0">
-                   
-                        <p className="lg:text-5xl md:text-3xl text-xl font-bold text-center ">One of the most famous Travel Bloger from Bangladesh</p>
-                   
+
+                    <p className="lg:text-5xl md:text-3xl text-xl font-bold text-center ">One of the most famous Travel Bloger from Bangladesh</p>
+
                 </div>
             </div>
         </div>
