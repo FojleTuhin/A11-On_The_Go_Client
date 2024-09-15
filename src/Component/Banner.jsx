@@ -1,4 +1,6 @@
 import 'animate.css';
+import video from "../../public/dd.mp4"
+
 const Banner = () => {
     return (
         <div className="bg-[url('https://i.ibb.co/GFSbS4m/pexels-dreamypixel-552785.jpg')] h-[600px] bg-cover text-center  ">

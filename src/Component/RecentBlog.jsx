@@ -49,7 +49,7 @@ const RecentBlog = () => {
 
 
     return (
-        <div className='bg-[#DDF3FD] px-4 md:px-8 lg:px-[70px] pb-10  pt-20 '>
+        <div className='bg-[#D9EFFA] px-4 md:px-8 lg:px-[70px] pb-10  pt-20 '>
             <div className="text-center space-y-2 mb-20">
                 <p className="text-2xl font-medium md:text-5xl md:font-semibold text-[#020043]">Latest Stories from Our Blog</p>
                 <p className="text-[18px] font-medium md:text-2xl md:font-semibold text-[#020043]">Explore fresh insights, travel tips, and adventures from around the world</p>
