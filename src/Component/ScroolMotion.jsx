@@ -1,7 +1,7 @@
 import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
 
-const COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+const COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C","#DDF3FD"];
 
 const ScroolMotion = () => {
 

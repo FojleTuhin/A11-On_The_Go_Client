@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className='bg-[#1F2744] '>
-            <div className=" px-4 md:px-8 lg:px-[100px] py-16 grid md:grid-cols-3 gap-6 justify-center text-white">
+            <div className=" px-4 md:px-8 lg:px-[100px] py-16 grid md:grid-cols-3 gap-6 justify-center text-white max-w-7xl mx-auto">
                 <div>
                     <div className='flex items-center'>
                         <img className='h-[50px] w-[50px]' src="https://i.ibb.co/BcqyDDJ/on-the-go-logo.png" alt="" />
@@ -25,8 +25,8 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <p className="font-semibold mt-2 mb-8 text-xl text-center md:text-left">Properties</p>
-                    <ul>
+                    <p className="font-semibold mt-2 mb-8 text-xl text-center ">Properties</p>
+                    <ul className='text-center'>
                         <li className="mb-2">About us</li>
                         <li className="mb-2">Our Mission</li>
                         <li className="mb-2">Privacy Policy</li>
@@ -35,8 +35,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <p className="font-semibold mt-2 mb-8 text-xl text-center md:text-left">Area</p>
-                    <ul>
+                    <p className="font-semibold mt-2 mb-8 text-xl text-center ">Area</p>
+                    <ul className='text-center'>
                         <li className="mb-2">Bandarban</li>
                         <li className="mb-2">Rangamati</li>
                         <li className="mb-2">Cox's Bazar</li>

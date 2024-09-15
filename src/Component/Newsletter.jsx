@@ -16,9 +16,9 @@ const Newsletter = () => {
                 <ToastContainer></ToastContainer>
                 <p className="text-center text-3xl font-bold">Newsletter</p>
                 <p className="text-center mt-6 text-xl  ">Subscribe to our newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p>
-                <div className="mt-10  w-[50%] m-auto ">
+                <div className="mt-10 md:w-[80%] lg:w-[90%] m-auto ">
                     <form onSubmit={handleNewsLetter}>
-                        <input type="text" placeholder="Email..." required className="w-[90%] md:w-[70%] border-2 border-black h-[48px] px-6" />
+                        <input type="text" placeholder="Email..." required className="w-[50%] md:w-[70%] lg:w-[80%] border-2 border-black h-[48px] px-6" />
                         <button type="submit" className="bg-black text-white py-3 px-6 ml-5 font-bold">Subscribe</button>
                     </form>
                 </div>
